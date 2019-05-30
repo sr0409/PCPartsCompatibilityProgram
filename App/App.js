@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     //flexGrow: 1,
     margin: 10,
     backgroundColor: 'red',
-    fontSize: 18,
+    fontSize: 20,
     textAlign: 'center',
     alignSelf: 'stretch',
 
