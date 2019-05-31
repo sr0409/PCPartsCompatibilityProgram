@@ -5,14 +5,11 @@ export default class FlatListBasics extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <FlatList
-          data={[
-            {key: 'BUILD'},
-            {key: 'PART SEARCH'},
-            {key: 'ABOUT'} 
-          ]}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-        />
+        
+          <Text style={styles.item}>Build</Text>
+          <Text style={styles.item}>Part search</Text>
+          <Text style={styles.item}>About</Text>
+
       </View>
     );
   }
@@ -21,19 +18,16 @@ export default class FlatListBasics extends Component {
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 22,
-   alignItems: 'stretch',
-   flexWrap: 'wrap'
-   
+   paddingTop: 22,   
   },
+
   item: {
-    //alignSelf: 'center',
-    //flexGrow: 1,
+    flex: 1,
     margin: 10,
     backgroundColor: 'red',
     fontSize: 18,
     textAlign: 'center',
-    alignSelf: 'stretch',
+    textAlignVertical: 'center'
 
     },
 })
