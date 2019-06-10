@@ -11,36 +11,57 @@ class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
-          <Text style={styles.item}>Click Me 111111!</Text>
+          <Text style={styles.item}>Build</Text>
         </TouchableOpacity>
         <TouchableOpacity  style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
-          <Text style={styles.item}>Click Me!22222222</Text>
+          <Text style={styles.item}>Parts</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
-          <Text style={styles.item}>Click Me!3333333</Text>
+        <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('About')}>
+          <Text style={styles.item}>About</Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
 
-class DetailsScreen extends React.Component {
+class PartsScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Back'
+  };
   render() {
     return (
       <View style={styles.container}>
-        <Text>Details Screen</Text>
-        <TouchableOpacity
-          title="Go to Details... again"
-          onPress={() => this.props.navigation.navigate('Details')}
-        />
-        <TouchableOpacity
-          title="Go to Home"
-          onPress={() => this.props.navigation.navigate('Home')}
-        />
-        <TouchableOpacity
-          title="Go back"
-          onPress={() => this.props.navigation.navigate()}
-        />
+        <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
+          <Text style={styles.item}>CPU</Text>
+        </TouchableOpacity>
+        <TouchableOpacity  style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
+          <Text style={styles.item}>Cooler</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
+          <Text style={styles.item}>Motherboard</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
+          <Text style={styles.item}>Memory</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
+          <Text style={styles.item}>Storage</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.navigate('Details')}>
+          <Text style={styles.item}>Power Supply</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
+
+class AboutScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Back'
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+          <Text>Once upon a time two lazy bastards decided to write this program and now we're rich</Text>
       </View>
     );
   }
@@ -52,8 +73,11 @@ const RootStack = createStackNavigator(
       screen: HomeScreen,
     },
     Details: {
-      screen: DetailsScreen,
+      screen: PartsScreen,
     },
+    About: {
+      screen: AboutScreen
+    }
   },
   {
     initialRouteName: 'Home',
