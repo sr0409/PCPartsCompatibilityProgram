@@ -18,14 +18,13 @@ function parseTable(db){
     regex = /\[\d+\]/gi
     file = file.replace(regex, '')
 
-
     const $ = cheerio.load(file)
     cheerioTableparser($);
-    var data = $("#mw-content-text > div > table:nth-child(26)").parsetable(true, true, true);
+    var data = $("#mw-content-text > div > table:nth-child(26)").parsetable(true, true, true);// table location on html
     var rowCount = data[0].length
     var stmt = db.prepare("INSERT INTO CPU (cpu_family, processor_brand, processor_model, cores_threads, cpu_clock_normal, cpu_turbo_clock, igpu_clock, igpu_turbo_clock, l3_cache, tdp, release_date, socket, pcie_version, memory) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-
-    for(var i = 2; i < rowCount; ++i){ //change accordingly to the table
+    //stmt field names on the table + equal num of ?
+    for(var i = 2; i < rowCount; ++i){ //change (i)accordingly to the table
         var record = [
             "Sandy Bridge",
             data[1][i], //Brand
