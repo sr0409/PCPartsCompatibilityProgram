@@ -1,6 +1,6 @@
 BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS "CPU" (
-	"cpu_family"	varchar(60),
+	"architecture"	varchar(60),
 	"processor_brand"	varchar(60),
 	"processor_model"	varchar(60),
 	"cores_threads"	varchar(60),
@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS "CPU" (
 	"igpu_clock"	varchar(60),
 	"igpu_turbo_clock"	varchar(60),
 	"l3_cache"	varchar(60),
-	"l4_cache"	varchar(60),
 	"tdp"	varchar(60),
 	"release_date"	varchar(60),
 	"socket"	varchar(60),

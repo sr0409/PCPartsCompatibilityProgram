@@ -10,3 +10,7 @@ node scraper_skylake_desktop
 node scraper_skylake_server
 node scraper_skylakex_performance
 node scraper_skylake_sp
+node scraper_kabylake_desktop
+node scraper_kabylake_server
+node scraper_coffeelake_desktop8gen
+node scraper_coffeelake_desktop9gen
