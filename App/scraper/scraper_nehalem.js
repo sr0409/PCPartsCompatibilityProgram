@@ -10,7 +10,7 @@ db.serialize(function() {
 })
 
 function parseTable(db){
-    var file = fs.readFileSync('Nehalem.html', {encoding: 'utf8'})
+    var file = fs.readFileSync('nehalem.html', {encoding: 'utf8'})
     var regex = /<br\s*\/?>/gi
     file = file.replace(regex, ' ')
     regex = /Up to dual channel /gi

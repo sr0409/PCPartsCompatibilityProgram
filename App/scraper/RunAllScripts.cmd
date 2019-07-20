@@ -15,3 +15,5 @@ node scraper_kabylake_server
 node scraper_coffeelake_desktop8gen
 node scraper_coffeelake_desktop9gen
 node scraper_coffeelake_server
+node scraper_athlonx2_l2
+node scraper_athlonx2_l3
