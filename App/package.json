@@ -14,7 +14,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "^3.11.0",
     "sqlite3": "^4.0.9",
-    "table-scraper": "^0.1.0"
+    "table-scraper": "^1.0.3"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
